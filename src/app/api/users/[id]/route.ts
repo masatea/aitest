@@ -1,0 +1,11 @@
+import { NextRequest, NextResponse } from "next/server";
+
+export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+  // TODO: ユーザー詳細取得を実装
+  return NextResponse.json({ message: "Not implemented" }, { status: 501 });
+}
+
+export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+  // TODO: ユーザー更新を実装
+  return NextResponse.json({ message: "Not implemented" }, { status: 501 });
+}
