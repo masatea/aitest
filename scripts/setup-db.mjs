@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Load .env manually
 const envContent = readFileSync(resolve(__dirname, '..', '.env'), 'utf-8');
-const dbUrl = envContent.match(/DATABASE_URL=(.*)/)?.[1]?.trim();
+const dbUrl = envContent.match(/DATABASE_URL=(.*)/)?.[1]?.trim().replace(/^["']|["']$/g, '');
 
 if (!dbUrl) {
   console.error('DATABASE_URL not found in .env');
